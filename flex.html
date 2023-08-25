@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	
+	<style type="text/css">
+
+		*{
+			background-color: black;
+		}
+		
+		header{
+			background-color: aqua;
+			display: flex;
+			justify-content: space-between;
+			padding: 25px;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		header h1{
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			padding: 25px;
+			color: black;
+			background-color: aqua;
+		}
+		
+
+		p{
+			font-size: 27px;
+			font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-weight: bolder;
+			color: black;
+			background-color: aqua;
+			padding: 25px;
+		}
+
+
+		#timmer{
+			display: flex;
+			justify-content: center;
+			font-size: 250px;
+			color: white;
+		}
+
+		footer{
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		footer button{
+			font-size: 45px;
+			width: 20%;
+			height: 50px;
+			cursor: pointer;
+			background-color: white;
+			color: black;
+		}
+		footer button:hover{
+			color: white;
+			background-color: black;
+		}
+
+	</style>
+</head>
+<body>
+	
+
+	<header>
+		<h1>CounterApp</h1>
+		<p>The birth place of counting</p>
+	</header>
+
+	<div class="counter-app">
+
+	<h1 id="timmer">0</h1>
+
+	<section>
+
+	<footer>
+		<button onclick="decrease()">-</button>
+		<button onclick="increase()">+</button>
+	</footer>
+
+	</section>
+</div>
+<script type="text/javascript">
+	
+	function increase () {
+		let timmer = document.getElementById("timmer");
+
+		let number = timmer.innerText;
+
+		timmer.innerText = parseInt(number) + 1;
+	}
+
+	function decrease () {
+		let timmer = document.getElementById("timmer");
+
+		let number = parseInt(timmer.innerText);
+		if(number > 0){
+			timmer.innerText = number -1
+		}
+		else{
+			timmer.innerText = 0;
+		}
+		
+	}
+
+</script>
+</body>
+</html>
